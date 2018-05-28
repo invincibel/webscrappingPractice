@@ -6,7 +6,7 @@ libxml_use_internal_errors(TRUE);
 if(!empty($html)){
     $pokemon_doc->loadHTML($html);
     libxml_clear_errors();
-    $pokemon_xpath=new DOMPath($pokemon_doc);
+    $pokemon_xpath=new DOMXPath($pokemon_doc);
     
     $pokemon_row=$pokemon_xpath->query('//h2[@id]');
     
