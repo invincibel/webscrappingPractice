@@ -29,7 +29,18 @@
              $extension=returnExtension($url);
              if($extension)
              {
-                 echo $url;
+              $ch=curl_init();
+                 curl_setopt($ch,CURLOPT_URL,$url);
+                 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                 $return = curl_exec($ch);
+                 curl_close($ch);
+                 $destination = "downloads/file.$extension";
+                 $file = fopen($destination,"w+");
+                 fputs($file,$return);
+                 if(fclose($file))
+                 {
+                     echo "File Downloaded";
+                 }
              }
          }
      }
