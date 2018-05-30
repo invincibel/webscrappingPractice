@@ -6,3 +6,5 @@
  step3: impose the  condition<br>
 <h2>2. Regular expression</h2>
 <p>In regular expression we are just traversing the DOM first do file_get_html which will include all the DOM tags and the  start traversing the DOM like we have done before.</p>
+<h3>cURL</h3>
+<p>It is a command line tool usedx to fetch data from external severs</p>
