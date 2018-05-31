@@ -1,11 +1,7 @@
 <?php
     function fetchPage($name)
     {
-        @$html=file_get_contents("https://github.com/".$name);
-        libxml_use_internal_errors(TRUE);
-        if(!empty($html)){
-            libxml_clear_errors(); 
-            echo $html;
+        
         }
     }
  if(isset($_POST['Uname'])){$name=$_POST['Uname'];}
